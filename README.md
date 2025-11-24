@@ -68,7 +68,6 @@ This project is suitable for:
     **AQICN (World Air Quality Index API)**  
     Documentation: https://aqicn.org/api/
     
-    Replace your token in backend:
 
   private static final String TOKEN = "3eac61246f2d387ac0f9a1be53e1f4256dff6b23";
 
@@ -76,25 +75,25 @@ This project is suitable for:
 
 ### 🟦 Backend (Spring Boot)
 
-1. Navigate to backend folder:
+1. Navigate to backend folder
    
-2. Run Spring Boot app:
+2. Run Spring Boot app
 
 
 Backend runs at:
 
 👉 http://localhost:9090
 
-API Endpoint:
+API Endpoint
 
 
 ### 🟩 Frontend (React.js)
 
-1. Navigate to frontend folder:
+1. Navigate to frontend folder
 
-2. Install dependencies:
+2. Install dependencies
 
-3. Run app:
+3. Run app
 
 
 Frontend runs at:
@@ -118,26 +117,11 @@ Frontend runs at:
 - CSS3  
 - HTML5  
 
----
 
 ## ⚡ Performance
 
 - Cached AQI responses for repeated city searches  
 - Reduced external API calls  
 - Fast and responsive UI  
-
----
-
-## ✨ Future Enhancements
-
-- Add dark mode  
-- Add city auto-suggestions  
-- Add AQI history graph  
-- Deploy backend + frontend online  
-- Add map-based AQI visualization  
-
-
-
-
 
 
