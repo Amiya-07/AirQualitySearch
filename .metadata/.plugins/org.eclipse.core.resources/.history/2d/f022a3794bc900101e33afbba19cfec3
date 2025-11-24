@@ -1,0 +1,5 @@
+package com.aqi.config;
+
+public class CacheConfig {
+
+}

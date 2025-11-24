@@ -1,0 +1,15 @@
+package com.aqi.model;
+
+import com.AirQualitySearch.entity.CityAQIResponse;
+
+import lombok.Data;
+
+@Data
+public class CityAQIResponse {
+
+    private String cityName;
+    private int aqi;
+    private String dominantPollutant;
+    private String airQualityStatus;
+    private String lastUpdated;
+}

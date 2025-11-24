@@ -1,0 +1,5 @@
+package com.aqi.model;
+
+public class CityAQIResponse {
+
+}

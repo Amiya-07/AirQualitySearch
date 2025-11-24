@@ -1,0 +1,55 @@
+package com.aqi.service.impl;
+
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import org.json.JSONObject;
+
+import com.aqi.model.CityAQIResponse;
+import com.aqi.service.AirQualityService;
+
+@Service
+public class AirQualityServiceImpl implements AirQualityService {
+
+    private static final String API_URL = "https://api.waqi.info/feed/";
+    private static final String TOKEN = "3eac61246f2d387ac0f9a1be53e1f4256dff6b23";
+    @Override
+    @Cacheable("aqiCache")
+    public CityAQIResponse getAirQualityByCity(String cityName) {
+
+        try {
+            String url = API_URL + cityName + "/?token=" + TOKEN;
+
+            RestTemplate restTemplate = new RestTemplate();
+            String response = restTemplate.getForObject(url, String.class);
+
+            JSONObject json = new JSONObject(response);
+
+            if (!json.getString("status").equals("ok")) {
+                throw new RuntimeException("City not found");
+            }
+
+            JSONObject data = json.getJSONObject("data");
+            JSONObject cityInfo = data.getJSONObject("city");
+
+            CityAQIResponse aqi = new CityAQIResponse();
+
+            aqi.setCityName(cityInfo.getString("name"));
+            aqi.setAqi(data.getInt("aqi"));
+            aqi.setDominantPollutant(data.getString("dominentpol"));
+            aqi.setLastUpdated(data.getJSONObject("time").getString("s"));
+
+            // Status based on AQI
+            int value = aqi.getAqi();
+            if (value <= 50) aqi.setAirQualityStatus("Good");
+            else if (value <= 100) aqi.setAirQualityStatus("Moderate");
+            else if (value <= 200) aqi.setAirQualityStatus("Unhealthy");
+            else aqi.setAirQualityStatus("Very Unhealthy");
+
+            return aqi;
+
+        } catch (Exception ex) {
+            throw new RuntimeException("Failed to fetch AQI for: " + cityName);
+        }
+    }
+}

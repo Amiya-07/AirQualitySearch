@@ -1,0 +1,5 @@
+package com.aqi.service.impl;
+
+public class AirQualityServiceImpl {
+
+}

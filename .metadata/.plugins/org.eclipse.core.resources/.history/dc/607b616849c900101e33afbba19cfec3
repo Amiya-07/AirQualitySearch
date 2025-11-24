@@ -1,0 +1,5 @@
+package com.AirQualitySearch.entity;
+
+public class CityAQIResponse {
+
+}
