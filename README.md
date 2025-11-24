@@ -12,14 +12,6 @@ AQI Search Application is a full-stack project that allows users to search real-
 - ⚡ **Performance:** Caching enabled for faster responses  
 - 🌍 Fetches live AQI data from external API (AQICN)
 
-This project is suitable for:
-- Internship assignment submissions  
-- Portfolio showcase  
-- Learning Spring Boot + React integration  
-- Full-stack practice
-
----
-
 ## 🚀 Features
 
 ### 🟦 Frontend (React.js)
