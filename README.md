@@ -102,13 +102,6 @@ Frontend runs at:
 👉 http://localhost:3000
 
 
-## 🖼 Screenshots
-(Add screenshots here later)
-
-Example:
-
----
-
 ## 🛠 Tech Stack
 
 ### Backend
