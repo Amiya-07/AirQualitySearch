@@ -1,20 +1,19 @@
-# 🌿 AQI Search Application  
+#  AQI Search Application  
 *A Full-Stack Air Quality Index Search App using Spring Boot (Backend) & React.js (Frontend)*
 
----
 
-## 📌 Overview
+##  Overview
 
 AQI Search Application is a full-stack project that allows users to search real-time **Air Quality Index (AQI)** for any city.
 
-- 🔧 **Backend:** Java + Spring Boot  
-- 🎨 **Frontend:** React.js  
-- ⚡ **Performance:** Caching enabled for faster responses  
-- 🌍 Fetches live AQI data from external API (AQICN)
+-  **Backend:** Java + Spring Boot  
+-  **Frontend:** React.js  
+-  **Performance:** Caching enabled for faster responses  
+-  Fetches live AQI data from external API (AQICN)
 
-## 🚀 Features
+##  Features
 
-### 🟦 Frontend (React.js)
+###  Frontend (React.js)
 - Beautiful and modern UI  
 - Search bar for city input  
 - Dynamic AQI card with color coding  
@@ -22,7 +21,7 @@ AQI Search Application is a full-stack project that allows users to search real-
 - Clear air quality indicators  
 - Error message for invalid city searches  
 
-### 🔧 Backend (Spring Boot)
+###  Backend (Spring Boot)
 - REST API endpoint: `/api/aqi/{city}`
 - Calls external AQICN API  
 - Uses `RestTemplate`  
@@ -31,7 +30,7 @@ AQI Search Application is a full-stack project that allows users to search real-
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
       AirQualitySearch/
     │── AirQualitySearch/ # Backend (Spring Boot)
@@ -55,7 +54,7 @@ AQI Search Application is a full-stack project that allows users to search real-
 
 ---
 
-## 🔌 API Used
+##  API Used
 
     **AQICN (World Air Quality Index API)**  
     Documentation: https://aqicn.org/api/
@@ -63,9 +62,9 @@ AQI Search Application is a full-stack project that allows users to search real-
 
   private static final String TOKEN = "3eac61246f2d387ac0f9a1be53e1f4256dff6b23";
 
-  ## 🔥 How to Run the Project
+  ##  How to Run the Project
 
-### 🟦 Backend (Spring Boot)
+###  Backend (Spring Boot)
 
 1. Navigate to backend folder
    
@@ -74,12 +73,12 @@ AQI Search Application is a full-stack project that allows users to search real-
 
 Backend runs at:
 
-👉 http://localhost:9090
+      http://localhost:9090
 
 API Endpoint
 
 
-### 🟩 Frontend (React.js)
+###  Frontend (React.js)
 
 1. Navigate to frontend folder
 
@@ -90,10 +89,10 @@ API Endpoint
 
 Frontend runs at:
 
-👉 http://localhost:3000
+       http://localhost:3000
 
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 ### Backend
 - Java 21  
@@ -110,7 +109,7 @@ Frontend runs at:
 - HTML5  
 
 
-## ⚡ Performance
+##  Performance
 
 - Cached AQI responses for repeated city searches  
 - Reduced external API calls  
